@@ -1,0 +1,108 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "@id": "https://iconnect-ortho.com/#clinic",
+  "name": "アイコネクト大森矯正歯科",
+  "alternateName": "iConnect Omori Orthodontics",
+  "url": "https://iconnect-ortho.com/",
+  "image": "https://iconnect-ortho.com/【要確認：外観またはロゴ画像URL】",
+  "logo": "https://iconnect-ortho.com/【要確認：ロゴ画像URL】",
+  "telephone": "+81-3-【要確認】",
+  "description": "東京都品川区南大井、JR大森駅東口から徒歩1分の矯正歯科専門クリニック。ワイヤー矯正・マウスピース型矯正装置（インビザライン）・子どもの矯正に対応。土日も19時まで診療。初診相談は無料でオンライン相談にも対応。",
+  "medicalSpecialty": "Orthodontic",
+  "isAcceptingNewPatients": true,
+  "priceRange": "【要確認：例 ￥¥¥ または 〜1,100,000円】",
+  "currenciesAccepted": "JPY",
+  "paymentAccepted": "【要確認：現金, クレジットカード, デンタルローン】",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "南大井【要確認：番地・ビル名・階】",
+    "addressLocality": "品川区",
+    "addressRegion": "東京都",
+    "postalCode": "【要確認：140-00xx】",
+    "addressCountry": "JP"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "【要確認】",
+    "longitude": "【要確認】"
+  },
+  "hasMap": "【要確認：GoogleマップURL】",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["【要確認：平日の診療曜日】"],
+      "opens": "【要確認】",
+      "closes": "【要確認】"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday", "Sunday"],
+      "opens": "【要確認】",
+      "closes": "19:00"
+    }
+  ],
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "品川区" },
+    { "@type": "AdministrativeArea", "name": "大田区" },
+    { "@type": "Place", "name": "大森駅周辺（南大井・大森北・山王・大森本町）" }
+  ],
+  "availableService": [
+    {
+      "@type": "MedicalProcedure",
+      "name": "マウスピース型矯正装置（インビザライン）",
+      "url": "https://iconnect-ortho.com/【要確認】"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "ワイヤー矯正",
+      "url": "https://iconnect-ortho.com/【要確認】"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "子どもの矯正（小児矯正）",
+      "url": "https://iconnect-ortho.com/【要確認】"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "部分矯正",
+      "url": "https://iconnect-ortho.com/【要確認】"
+    }
+  ],
+  "employee": {
+    "@type": "Physician",
+    "@id": "https://iconnect-ortho.com/#director",
+    "name": "冨田 大介",
+    "jobTitle": "院長",
+    "medicalSpecialty": "Orthodontic",
+    "worksFor": { "@id": "https://iconnect-ortho.com/#clinic" },
+    "award": "日本3Dプリンティング矯正学会 2023年 ベストプレゼンテーション賞",
+    "memberOf": [
+      { "@type": "Organization", "name": "【要確認：所属学会】" }
+    ],
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "【要確認：出身大学】" },
+    "url": "https://iconnect-ortho.com/【要確認：院長紹介ページ】"
+  },
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "name": "無料初診相談を予約する",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://iconnect-ortho.com/【要確認：予約ページ】",
+      "actionPlatform": [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/MobileWebPlatform"
+      ]
+    }
+  },
+  "sameAs": [
+    "https://www.instagram.com/iconnect_ortho_official/",
+    "https://haisha-yoyaku.jp/bun2sdental/detail/index/id/z200012208/",
+    "https://www.kyousei-shika.net/clinic/174281/",
+    "https://medicaldoc.jp/clinic/398809/",
+    "https://doctorsfile.jp/h/212745/df/1/",
+    "https://tokyo-doctors.com/dentalList/84481/",
+    "【要確認：GoogleマップのURL】",
+    "【要確認：Threads のURL】"
+  ]
+}
