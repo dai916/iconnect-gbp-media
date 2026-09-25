@@ -29,26 +29,21 @@ Claude は Brave 検索 + Google Maps/Places を使い、複数ソースで一�
 - `04-gbp/` 投稿本文ガイド（毎回「医院の事実」を1つ入れる）、Q&A欄の種10問
 - `05-compliance/` 医療広告ガイドライン・ステマ規制・AI向け逆効果行為
 
-## 3. 判明している事実（他セッションの記録より）
+## 3. 判明している事実（2026-09-25 Mac側で確定）
 
-- GBPのウェブサイト欄は `https://iconnect-ortho.com/?src=gbp_site` に変更済みで、GA4で `src` を追跡している（2026-09-21「GMB新セッション作成」）。
-  → iconnect-ortho.com にGA4は導入済み。流入元の目印は UTM ではなく `src=` パラメータ方式。
-- コラム投稿の効果測定でGA4を使っている（院長談）。設定の詳細は Mac 上のセッション
-  「ホームページコラム検証結果」（サイドバー「HPコラム」グループ）と Obsidian にある。クラウド側からは読めない。
+GA4 の設定は `01-measurement/ga4-ai-referral.md` §0 にまとめた。要点:
+
+- 測定ID `G-V9ECX6FNG1` / プロパティ `352420487`。GTM `GTM-5BVCBHW` 経由。院長アカウントは**閲覧者のみ**（管理はアウトカム）。
+- 予約CV（キーイベント）は既設: `web_予約` / `denwa_yoyaku` / `line_yoyaku` / `form_submit`。予約完了は外部ドメインで取れない。
+- `src=` はランディングページのクエリ文字列として残るだけ（カスタムディメンション無し）。
+- **デフォルトチャネルグループに `AI Assistant` が既にある**。カスタムチャネルグループは不要（閲覧者権限では作れない）。
+- **claude.ai は参照元として 0 件**（2026-01〜09）。AI参照元はほぼ chatgpt.com。Claude 由来は Direct か指名検索に混ざるため、**問診票が唯一の一次データ**。
+- API は非公開リポジトリ `iconnect-column` の `ga4-adhoc.yml`（読み取り専用）で叩ける。手順書 §3 にクエリJSONあり。ベースライン数値は Obsidian `AI検索対策/2026-09-25_GA4現状とAI経由流入ベースライン.md`。
 
 ## 4. 未完了・次にやること（優先順）
 
-1. **GA4の既存設定を把握する**  
-   Macで「ホームページコラム検証結果」を開き、次を入力して回答を新セッションに貼る:
-   ```
-   GA4の設定内容をまとめてください。測定ID、srcパラメータの記録方法（カスタムディメンション名かGTMか）、
-   コンバージョンやキーイベントの一覧、コラム効果測定で見ている指標、管理画面の権限の有無。
-   ```
-   または Obsidian のGA4ノート（.md）を添付。
-2. **GA4に AI Referral チャネルを作る**（`01-measurement/ga4-ai-referral.md` §1）  
-   管理 → データの表示 → チャネルグループ → 新規作成。参照元の正規表現:
-   `^(claude\.ai|chatgpt\.com|chat\.openai\.com|perplexity\.ai|gemini\.google\.com|copilot\.microsoft\.com|you\.com|felo\.ai|genspark\.ai)$`  
-   院長はチャネルグループ画面のスクリーンショットを送る予定だった。予約完了イベント（`reservation_complete`）は既存の仕組みに合わせて設計し直す。
+1. ~~GA4の既存設定を把握する~~ **完了**（§3）。
+2. ~~GA4に AI Referral チャネルを作る~~ **不要**。標準の `AI Assistant` チャネルを使う。代わりに毎月1日に §3 のクエリを実行し、問診票の集計と並べて Obsidian に記録する。
 3. **`【要確認】` の事実確定**（院内）: 住所の番地・ビル名・階、電話、平日診療時間・休診日、料金の範囲と内訳、所属学会・資格、予約URL。  
    `02-website/`・`03-listings/`・`04-gbp/` のテンプレートに一括反映。
 4. **ベースライン計測**: `cd docs/llmo/01-measurement/tools && pip install -r requirements.txt && export ANTHROPIC_API_KEY=... && python measure_ai_mentions.py --only P01,P18` で動作確認 → 20本実行。  
