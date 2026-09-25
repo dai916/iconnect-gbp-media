@@ -1,0 +1,44 @@
+# iconnect-ortho.com 用 robots.txt の例
+# 方針: 検索・回答用のAIクローラーは許可し、学習専用クローラーは任意で拒否する。
+# 実際の robots.txt に既存のルールがある場合は、その下に追記すること。
+
+# --- AI検索・回答時の取得（引用されるために必須で許可） ---
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# --- 学習専用クローラー（拒否しても検索・引用には影響しない。院の方針で決める） ---
+# User-agent: ClaudeBot
+# Disallow: /
+# User-agent: GPTBot
+# Disallow: /
+# User-agent: CCBot
+# Disallow: /
+
+# --- それ以外 ---
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+Sitemap: https://iconnect-ortho.com/sitemap.xml
