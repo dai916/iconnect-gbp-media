@@ -9,7 +9,7 @@ AIは **投稿の本文テキスト** を読む。画像の中の文字は読ま
 1. **その日のテーマ**（画像と同じ内容を文章で。1〜3文）
 2. **医院の事実を1つ**（下の一覧からローテーション）
 3. **行動の一文**（例：「無料初診相談はWEBから24時間ご予約いただけます」）
-4. **リンク**（`https://iconnect-ortho.com/contact?utm_source=google&utm_medium=gbp_post&utm_campaign=YYYYMM`）
+4. **リンク**（`https://iconnect-ortho.com/contact?src=gbp_post`）
 
 ## 「医院の事実」ローテーション一覧
 
@@ -28,7 +28,7 @@ AIは **投稿の本文テキスト** を読む。画像の中の文字は読ま
 > 【矯正中の歯みがき】装置のまわりは汚れが残りやすいので、ワンタフトブラシを1本足すだけで磨き残しがぐっと減ります。
 > 当院はJR大森駅東口から徒歩1分、土日も19時まで診療しています。
 > 無料初診相談はWEBから24時間ご予約いただけます。
-> https://iconnect-ortho.com/contact?utm_source=google&utm_medium=gbp_post&utm_campaign=202610
+> https://iconnect-ortho.com/contact?src=gbp_post
 
 ## 書かないこと
 

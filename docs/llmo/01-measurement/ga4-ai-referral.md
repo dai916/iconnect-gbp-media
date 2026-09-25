@@ -29,16 +29,21 @@ Copilot は参照元が `bing.com` になる場合があるので、必要なら
 - 探索 → 自由形式：ディメンション「セッションのデフォルトチャネルグループ（作成したグループ）」× 指標「セッション」「キーイベント（reservation_complete）」
 - 月次で `AI Referral` の行を `01-measurement/intake-question.md` の記録シートに転記する。
 
-## 4. UTM の付け方（自院が管理するリンクのみ）
+## 4. 自院が管理するリンクの目印（既存の `src=` 方式に合わせる）
 
-AIは自院サイトを直接引用するため、サイトのURLにUTMは付けられない。
-自院が管理するプロフィールやリンク集に置くURLには次を付けて、経路を分けて見る。
+GBPのウェブサイト欄はすでに `https://iconnect-ortho.com/?src=gbp_site` に変更済みで、GA4側で `src` を拾う設定がある（2026-09-21 GMBセッション）。
+新しく置くリンクも同じ `src=` 方式で揃え、UTMと混在させない。
 
 | 置き場所 | URL例 |
 |---|---|
-| GBP のウェブサイト欄 | `https://iconnect-ortho.com/?utm_source=google&utm_medium=gbp` |
-| GBP 投稿内のリンク | `https://iconnect-ortho.com/contact?utm_source=google&utm_medium=gbp_post&utm_campaign=YYYYMM` |
-| Instagram / Threads プロフィール | `https://iconnect-ortho.com/?utm_source=instagram&utm_medium=social` |
+| GBP のウェブサイト欄（設定済み） | `https://iconnect-ortho.com/?src=gbp_site` |
+| GBP 投稿内のリンク | `https://iconnect-ortho.com/contact?src=gbp_post` |
+| Instagram / Threads プロフィール | `https://iconnect-ortho.com/?src=instagram` / `?src=threads` |
+
+AIは自院サイトを直接引用するため、AI経由の流入に目印は付けられない。AI経由は上記1のチャネル（参照元ドメイン）で見る。
+
+【要確認】`src` がGA4でどう記録されているか（カスタムディメンション名、またはGTMで `session_source` に転写しているか）。
+「ホームページコラム検証結果」セッションのGA4設定メモを参照して埋める。
 
 ## 5. 注意
 
