@@ -11,9 +11,9 @@
   "description": "東京都品川区南大井、JR大森駅東口から徒歩1分の矯正歯科専門クリニック。ワイヤー矯正・マウスピース型矯正装置（インビザライン）・子どもの矯正・部分矯正に対応。木曜・祝日を除き土日も19時まで診療。初診相談は無料（約30分）。",
   "medicalSpecialty": "Orthodontic",
   "isAcceptingNewPatients": true,
-  "priceRange": "初診相談 無料／検査・診断 税込33,000円／全体矯正 税込825,000〜1,430,000円／部分矯正 税込275,000〜605,000円",
+  "priceRange": "初診相談 無料／検査・診断 税込33,000円／全体矯正 税込825,000〜1,430,000円／部分矯正 税込275,000〜605,000円／来院ごとの処置料 税込5,500円",
   "currenciesAccepted": "JPY",
-  "paymentAccepted": "現金, 院内分割（12回まで無利息）, デンタルローン",
+  "paymentAccepted": "現金, クレジットカード（VISA, Mastercard, JCB, American Express, Diners Club）, 院内分割（12回まで無利息）, デンタルローン",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "南大井6丁目28-9 大成ビル1階",
@@ -113,6 +113,6 @@
     "https://medicaldoc.jp/clinic/398809/",
     "https://doctorsfile.jp/h/212745/df/1/",
     "https://tokyo-doctors.com/dentalList/84481/",
-    "【要確認：Threads のURL】"
+    "https://www.threads.com/@iconnect_ortho_official"
   ]
 }

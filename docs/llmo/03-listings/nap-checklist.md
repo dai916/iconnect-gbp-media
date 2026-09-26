@@ -39,7 +39,7 @@ Claude は複数ソースを突き合わせて医院を特定する。表記ゆ�
 | ドクターズ・ファイル | https://doctorsfile.jp/h/212745/df/1/ | | | | | | | |
 | 東京ドクターズ | https://tokyo-doctors.com/dentalList/84481/ | | | | | | | |
 | Instagram | https://www.instagram.com/iconnect_ortho_official/ | | | | | | | |
-| Threads | 【要確認】 | | | | | | | |
+| Threads | https://www.threads.com/@iconnect_ortho_official | | | | | | | |
 | 品川区歯科医師会 会員名簿 | 【要確認：掲載の有無】 | | | | | | | |
 
 ## まとめ記事への掲載（AIの引用元になりやすい）
