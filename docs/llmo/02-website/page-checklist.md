@@ -6,7 +6,8 @@ Web制作会社に渡す用。全項目にチェックが入ったら `docs/llmo
 
 - [ ] フッターに 正式名称・住所（丁目番地ビル名階）・電話・診療時間・休診日 を毎ページ表示
 - [ ] 「東京都品川区南大井」と「大森駅東口 徒歩1分」の両方を本文に書く（大森＝大田区と誤認されないため）
-- [ ] トップの最初の画面（ファーストビュー）に「無料初診相談」「24時間WEB予約」「オンライン相談可」「土日19時まで」をテキストで表示（画像の中の文字はAIに読まれない）
+- [ ] トップの最初の画面（ファーストビュー）に「無料初診相談（約30分）」「24時間WEB予約」「土日19時まで・木曜祝日休診」をテキストで表示（画像の中の文字はAIに読まれない）
+- [ ] 住所の表記を「南大井6丁目28-9 大成ビル1階」（半角）に統一。現在はお問い合わせページが全角「６丁目２８−９」、料金表ページが半角で混在
 - [ ] 各ページに `<title>` と meta description（事実を一文で）
 - [ ] 各ページに 最終更新日 を表示
 
@@ -30,16 +31,22 @@ Web制作会社に渡す用。全項目にチェックが入ったら `docs/llmo
 
 ## D. 構造化データ
 
-- [ ] `jsonld/clinic.jsonld` を全ページ（または少なくともトップ・アクセス・料金）に `<script type="application/ld+json">` で埋め込み
+現状（2026-09-26 実査）: トップページに Yoast 由来の `MedicalOrganization`（住所・座標・電話・診療時間・所属学会・治療メニュー入り）と `WebPage` が既にある。
+よくある質問ページ（/question）には FAQPage が無く、トップには用語集由来の `FAQPage`（EBMの説明）が入っている。
+
+- [ ] `/question` に `jsonld/faq.jsonld` を埋め込む（本文と一致させる）。トップの用語集FAQPageは削除するか用語集ページへ移す
+- [ ] 既存 `MedicalOrganization` に `jsonld/clinic.jsonld` の不足分を追加: `priceRange`、`paymentAccepted`、`potentialAction`（予約URL）、`sameAs`（GBP・Instagram・ポータル）。`@id` は既存の `#organization` に合わせる
+- [ ] 既存 `MedicalOrganization` の `openingHoursSpecification` は 10:30〜19:00 の連続になっている。昼休み（13:30〜14:30）を分けた2区間に修正
 - [ ] Google の リッチリザルト テスト でエラーなし
-- [ ] `sameAs` に GBP・Instagram・ポータル各ページのURLを列挙
 - [ ] 院長ページに Physician（`jsonld/clinic.jsonld` の employee と同じ @id）
 
 ## E. クローラー
 
-- [ ] `robots.txt.example` を反映（Claude-SearchBot / Claude-User / OAI-SearchBot / PerplexityBot を許可）
+現状: `robots.txt` は Yoast 既定（全許可・サイトマップあり）。`/llms.txt` は 404。
+
+- [ ] `robots.txt.example` を反映（Claude-SearchBot / Claude-User / OAI-SearchBot / PerplexityBot を明示的に許可。現状も拒否はしていない）
 - [ ] `llms.txt.example` を `/llms.txt` に配置
-- [ ] XMLサイトマップがあり robots.txt から参照されている
+- [x] XMLサイトマップがあり robots.txt から参照されている（`sitemap_index.xml`）
 - [ ] 主要ページが JavaScript なしでも本文が読める（サーバー側でHTMLに本文が入っている）
 
 ## F. 院長・権威性
@@ -50,8 +57,8 @@ Web制作会社に渡す用。全項目にチェックが入ったら `docs/llmo
 
 ## G. 予約導線
 
-- [ ] 予約ページのURLが固定で、外部予約システムに飛ぶ場合も自サイトに「予約」ページがある
-- [ ] 予約完了で `reservation_complete` イベントを GA4 に送る（`01-measurement/ga4-ai-referral.md`）
+- [ ] 予約リンク先を `https://omorikyousei.reserve.ne.jp/sp/index.php` に固定し、`_gl=` などの追跡パラメータ付きURLをリンクに書き込まない（コラム25本に古い `_gl=` 付きURLが残っている）
+- [x] 予約リンクのタップは既存のキーイベント（`web_予約` / `line_yoyaku` / `denwa_yoyaku`）で計測済み。予約完了は外部ドメインのため計測しない（`01-measurement/ga4-ai-referral.md`）
 - [ ] 予約ボタンのテキストが「無料初診相談を予約」など内容が分かる文言
 
 ## H. 禁止事項の確認

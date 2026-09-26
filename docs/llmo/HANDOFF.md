@@ -44,8 +44,9 @@ GA4 の設定は `01-measurement/ga4-ai-referral.md` §0 にまとめた。要�
 
 1. ~~GA4の既存設定を把握する~~ **完了**（§3）。
 2. ~~GA4に AI Referral チャネルを作る~~ **不要**。標準の `AI Assistant` チャネルを使う。代わりに毎月1日に §3 のクエリを実行し、問診票の集計と並べて Obsidian に記録する。
-3. **`【要確認】` の事実確定**（院内）: 住所の番地・ビル名・階、電話、平日診療時間・休診日、料金の範囲と内訳、所属学会・資格、予約URL。  
-   `02-website/`・`03-listings/`・`04-gbp/` のテンプレートに一括反映。
+3. ~~`【要確認】` の事実確定~~ **ほぼ完了**（2026-09-26 院長回答＋サイト実査で反映済み）。残りの `【要確認】` は9点のみ:
+   保定期間の目安／検査を相談当日に行えるか／追加アライナー費／クレジットカード可否／処置料・観察料の扱い（料金表に税込5,500円・3,300円の記載あり）／顎変形症の保険適用／英語対応／駐輪場／Threads のURL。
+   サイト実査で判明: Yoast の `MedicalOrganization` JSON-LD は既にある（`page-checklist.md` §D）。`/llms.txt` は404。まとめ記事2本はいずれも未掲載。
 4. **ベースライン計測**: `cd docs/llmo/01-measurement/tools && pip install -r requirements.txt && export ANTHROPIC_API_KEY=... && python measure_ai_mentions.py --only P01,P18` で動作確認 → 20本実行。  
    ChatGPT/Gemini は同じ20本を手動で投げ `results/manual-YYYYMM.csv` に記録。結果本文は `.gitignore` 済み。
 5. **制作会社に依頼**: `02-website/page-checklist.md` を渡す（JSON-LD、robots.txt、llms.txt、FAQ公開、限定解除表記）。

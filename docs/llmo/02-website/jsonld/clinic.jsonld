@@ -3,42 +3,42 @@
   "@type": "Dentist",
   "@id": "https://iconnect-ortho.com/#clinic",
   "name": "アイコネクト大森矯正歯科",
-  "alternateName": "iConnect Omori Orthodontics",
+  "alternateName": "iConnect Omori Orthodontic Clinic",
   "url": "https://iconnect-ortho.com/",
-  "image": "https://iconnect-ortho.com/【要確認：外観またはロゴ画像URL】",
-  "logo": "https://iconnect-ortho.com/【要確認：ロゴ画像URL】",
-  "telephone": "+81-3-【要確認】",
-  "description": "東京都品川区南大井、JR大森駅東口から徒歩1分の矯正歯科専門クリニック。ワイヤー矯正・マウスピース型矯正装置（インビザライン）・子どもの矯正に対応。土日も19時まで診療。初診相談は無料でオンライン相談にも対応。",
+  "image": "https://iconnect-ortho.com/wp-content/uploads/2023/02/20230110_01_0255-1-scaled.jpg",
+  "logo": "https://iconnect-ortho.com/wp-content/uploads/2023/02/circle-logo.png",
+  "telephone": "+81-50-3138-3592",
+  "description": "東京都品川区南大井、JR大森駅東口から徒歩1分の矯正歯科専門クリニック。ワイヤー矯正・マウスピース型矯正装置（インビザライン）・子どもの矯正・部分矯正に対応。木曜・祝日を除き土日も19時まで診療。初診相談は無料（約30分）。",
   "medicalSpecialty": "Orthodontic",
   "isAcceptingNewPatients": true,
-  "priceRange": "【要確認：例 ￥¥¥ または 〜1,100,000円】",
+  "priceRange": "初診相談 無料／検査・診断 税込33,000円／全体矯正 税込825,000〜1,430,000円／部分矯正 税込275,000〜605,000円",
   "currenciesAccepted": "JPY",
-  "paymentAccepted": "【要確認：現金, クレジットカード, デンタルローン】",
+  "paymentAccepted": "現金, 院内分割（12回まで無利息）, デンタルローン",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "南大井【要確認：番地・ビル名・階】",
+    "streetAddress": "南大井6丁目28-9 大成ビル1階",
     "addressLocality": "品川区",
     "addressRegion": "東京都",
-    "postalCode": "【要確認：140-00xx】",
+    "postalCode": "140-0013",
     "addressCountry": "JP"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "【要確認】",
-    "longitude": "【要確認】"
+    "latitude": 35.587301,
+    "longitude": 139.729807
   },
-  "hasMap": "【要確認：GoogleマップURL】",
+  "hasMap": "https://maps.app.goo.gl/yRmx6NjLhAxbRZDe7",
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["【要確認：平日の診療曜日】"],
-      "opens": "【要確認】",
-      "closes": "【要確認】"
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Friday", "Saturday", "Sunday"],
+      "opens": "10:30",
+      "closes": "13:30"
     },
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Saturday", "Sunday"],
-      "opens": "【要確認】",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Friday", "Saturday", "Sunday"],
+      "opens": "14:30",
       "closes": "19:00"
     }
   ],
@@ -51,22 +51,22 @@
     {
       "@type": "MedicalProcedure",
       "name": "マウスピース型矯正装置（インビザライン）",
-      "url": "https://iconnect-ortho.com/【要確認】"
+      "url": "https://iconnect-ortho.com/mouthpiece-correction"
     },
     {
       "@type": "MedicalProcedure",
       "name": "ワイヤー矯正",
-      "url": "https://iconnect-ortho.com/【要確認】"
+      "url": "https://iconnect-ortho.com/wire-straightening"
     },
     {
       "@type": "MedicalProcedure",
       "name": "子どもの矯正（小児矯正）",
-      "url": "https://iconnect-ortho.com/【要確認】"
+      "url": "https://iconnect-ortho.com/pediatric-correction"
     },
     {
       "@type": "MedicalProcedure",
       "name": "部分矯正",
-      "url": "https://iconnect-ortho.com/【要確認】"
+      "url": "https://iconnect-ortho.com/partial-correction"
     }
   ],
   "employee": {
@@ -76,19 +76,29 @@
     "jobTitle": "院長",
     "medicalSpecialty": "Orthodontic",
     "worksFor": { "@id": "https://iconnect-ortho.com/#clinic" },
-    "award": "日本3Dプリンティング矯正学会 2023年 ベストプレゼンテーション賞",
-    "memberOf": [
-      { "@type": "Organization", "name": "【要確認：所属学会】" }
+    "hasCredential": [
+      { "@type": "EducationalOccupationalCredential", "name": "歯学博士" }
     ],
-    "alumniOf": { "@type": "CollegeOrUniversity", "name": "【要確認：出身大学】" },
-    "url": "https://iconnect-ortho.com/【要確認：院長紹介ページ】"
+    "award": "日本3Dプリンティング矯正歯科学会 最優秀発表賞（2023年7月）",
+    "memberOf": [
+      { "@type": "Organization", "name": "日本矯正歯科学会" },
+      { "@type": "Organization", "name": "アメリカ矯正歯科学会" },
+      { "@type": "Organization", "name": "日本顎変形症学会" },
+      { "@type": "Organization", "name": "日本口蓋裂学会" },
+      { "@type": "Organization", "name": "日本スポーツ歯科医学会" }
+    ],
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "大阪歯科大学" },
+      { "@type": "CollegeOrUniversity", "name": "昭和大学大学院" }
+    ],
+    "url": "https://iconnect-ortho.com/archives/author/tomita"
   },
   "potentialAction": {
     "@type": "ReserveAction",
     "name": "無料初診相談を予約する",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://iconnect-ortho.com/【要確認：予約ページ】",
+      "urlTemplate": "https://omorikyousei.reserve.ne.jp/sp/index.php",
       "actionPlatform": [
         "http://schema.org/DesktopWebPlatform",
         "http://schema.org/MobileWebPlatform"
@@ -96,13 +106,13 @@
     }
   },
   "sameAs": [
+    "https://maps.app.goo.gl/yRmx6NjLhAxbRZDe7",
     "https://www.instagram.com/iconnect_ortho_official/",
     "https://haisha-yoyaku.jp/bun2sdental/detail/index/id/z200012208/",
     "https://www.kyousei-shika.net/clinic/174281/",
     "https://medicaldoc.jp/clinic/398809/",
     "https://doctorsfile.jp/h/212745/df/1/",
     "https://tokyo-doctors.com/dentalList/84481/",
-    "【要確認：GoogleマップのURL】",
     "【要確認：Threads のURL】"
   ]
 }
