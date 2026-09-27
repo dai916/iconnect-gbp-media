@@ -56,10 +56,11 @@ GA4 の設定は `01-measurement/ga4-ai-referral.md` §0 にまとめた。要�
    ```
    （この PR がマージされるまでは `-f tool_ref=claude/iconect-omori-patient-acquisition-uvyvik` を付ける）
    ChatGPT/Gemini は同じ20本を月次セッションで手動確認し、`iconnect-column/data/ai_mentions/manual-YYYYMM.csv` に記録。
-5. **制作会社に依頼**: `02-website/page-checklist.md` を渡す（JSON-LD、robots.txt、llms.txt、FAQ公開、限定解除表記）。
-6. **NAP統一**: `03-listings/nap-checklist.md` のマスター表記を確定し、13掲載先を点検。メディカルドック「大森駅の矯正歯科8医院」への掲載有無を確認。
-7. **GBP投稿本文の変更**: `04-gbp/post-text-guidelines.md` のルールを非公開リポジトリ `iconnect-gbp` の投稿生成に反映（本文に事実を1つ＋ `?src=gbp_post` リンク）。
-8. 必要なら PR 作成（ブランチはpush済み。PRはまだ作っていない）。
+5. **制作会社に依頼**: 依頼文ドラフト作成済み（Obsidian `AI検索対策/2026-09-27_依頼文_制作会社・まとめ記事掲載.md`）。**院長がアウトカムへ送信**し、`02-website/` の6ファイルを添付する。返答後に `page-checklist.md` のチェックを進める。
+6. **NAP統一**: マスター表記は確定済み。メディカルドック・Oh my teeth のまとめ記事はどちらも**未掲載**（2026-09-26 確認）。掲載申請文は上記 Obsidian ノートにあり、**院長が送信**。13掲載先の1文字比較は未着手。
+7. ~~GBP投稿本文の変更~~ **完了**（2026-09-27、iconnect-gbp PR #1 マージ済み）。本文に「医院の事実」を毎日1つ入れる。初回生成（2026-09-29分）で事実文が入ることを確認済み。リンクは従来どおり CTA ボタン（`?src=gbp`）。
+8. ~~PR 作成~~ **完了**（iconnect-gbp-media PR #1 マージ済み。`docs/llmo/` は main にある）。
+9. **翌月（2026-11-01 頃）の計測**で、FAQ公開・まとめ記事掲載の効果を P01〜P17 の言及率で確認する。ベースラインは 10/20（50%）。
 
 ## 5. 注意事項
 
