@@ -1,5 +1,9 @@
 # AI言及率 計測ツール
 
+**実運用は非公開リポジトリ `dai916/iconnect-column` の `ai-mentions.yml`（手動実行）で行う。**
+そちらがこのディレクトリの `prompts.csv` とツールを取得し、登録済みの API キーで実行して結果を非公開側に保存する。
+以下はローカルで直接動かす場合の手順。
+
 `measure_ai_mentions.py` は `../prompts.csv` の質問を Claude（Web検索あり）に投げ、
 自院名の言及有無・競合名・引用URLを `../results/claude-YYYYMMDD-HHMM.csv` に保存する。
 

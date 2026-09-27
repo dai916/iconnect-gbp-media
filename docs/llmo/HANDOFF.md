@@ -47,8 +47,15 @@ GA4 の設定は `01-measurement/ga4-ai-referral.md` §0 にまとめた。要�
 3. ~~`【要確認】` の事実確定~~ **完了**（2026-09-26 院長回答＋サイト実査で反映済み。処置料は来院ごと税込5,500円、観察料3,300円、保定2年、検査は相談当日、追加アライナー費なし、カード可、保険適用矯正なし、英語なし、駐輪場なし）。
    残る `【要確認】` は NAP 掲載先の登録有無（Apple/Yahoo/Bing/歯科医師会）と未承認医療機器の注記のみ。
    サイト実査で判明: Yoast の `MedicalOrganization` JSON-LD は既にある（`page-checklist.md` §D）。`/llms.txt` は404。まとめ記事2本はいずれも未掲載。
-4. **ベースライン計測**: `cd docs/llmo/01-measurement/tools && pip install -r requirements.txt && export ANTHROPIC_API_KEY=... && python measure_ai_mentions.py --only P01,P18` で動作確認 → 20本実行。  
-   ChatGPT/Gemini は同じ20本を手動で投げ `results/manual-YYYYMM.csv` に記録。結果本文は `.gitignore` 済み。
+4. ~~ベースライン計測~~ **仕組み完成・初回実行済み**（2026-09-27）。
+   非公開リポジトリ `dai916/iconnect-column` の `ai-mentions.yml`（手動実行のみ、スケジュール無し）が、この公開リポジトリの
+   `01-measurement/` から質問20本とツールを取得し、登録済みの API キーで実行する。結果は `iconnect-column/data/ai_mentions/`
+   （`summary.md` に推移表、`history.csv` に1行=1実行）。月1回、セッションから次で起動する:
+   ```
+   gh workflow run ai-mentions.yml -R dai916/iconnect-column
+   ```
+   （この PR がマージされるまでは `-f tool_ref=claude/iconect-omori-patient-acquisition-uvyvik` を付ける）
+   ChatGPT/Gemini は同じ20本を月次セッションで手動確認し、`iconnect-column/data/ai_mentions/manual-YYYYMM.csv` に記録。
 5. **制作会社に依頼**: `02-website/page-checklist.md` を渡す（JSON-LD、robots.txt、llms.txt、FAQ公開、限定解除表記）。
 6. **NAP統一**: `03-listings/nap-checklist.md` のマスター表記を確定し、13掲載先を点検。メディカルドック「大森駅の矯正歯科8医院」への掲載有無を確認。
 7. **GBP投稿本文の変更**: `04-gbp/post-text-guidelines.md` のルールを非公開リポジトリ `iconnect-gbp` の投稿生成に反映（本文に事実を1つ＋ `?src=gbp_post` リンク）。
