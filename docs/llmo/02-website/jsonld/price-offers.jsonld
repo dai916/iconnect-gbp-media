@@ -5,57 +5,231 @@
   "name": "アイコネクト大森矯正歯科",
   "url": "https://iconnect-ortho.com/price",
   "currenciesAccepted": "JPY",
-  "paymentAccepted": "現金, クレジットカード（VISA, Mastercard, JCB, American Express, Diners Club）, 院内分割（12回まで無利息）, デンタルローン",
+  "paymentAccepted": "現金, クレジットカード（VISA, Mastercard, JCB, American Express, Diners Club）, 院内分割（12回まで無利息）, デンタルローン（最長120回）",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "矯正治療 料金表（税込）",
     "url": "https://iconnect-ortho.com/price",
     "itemListElement": [
-      { "@type": "Offer", "name": "初診相談", "price": "0", "priceCurrency": "JPY", "description": "無料。所要時間は約30分",
-        "itemOffered": { "@type": "MedicalProcedure", "name": "初診相談" } },
-      { "@type": "Offer", "name": "セカンドオピニオン", "price": "11000", "priceCurrency": "JPY", "description": "税込11,000円",
-        "itemOffered": { "@type": "MedicalProcedure", "name": "セカンドオピニオン" } },
-      { "@type": "Offer", "name": "検査料＋診断料", "price": "33000", "priceCurrency": "JPY", "description": "税込33,000円。レントゲン・口腔内スキャン等",
-        "itemOffered": { "@type": "MedicalProcedure", "name": "精密検査・診断" } },
-      { "@type": "Offer", "name": "小児矯正治療（主にマウスピース型矯正装置）", "price": "495000", "priceCurrency": "JPY",
+      {
+        "@type": "Offer",
+        "name": "初診相談",
+        "price": "0",
+        "priceCurrency": "JPY",
+        "description": "無料。所要時間は約30分",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "初診相談"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "セカンドオピニオン",
+        "price": "11000",
+        "priceCurrency": "JPY",
+        "description": "税込11,000円",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "セカンドオピニオン"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "検査料＋診断料",
+        "price": "33000",
+        "priceCurrency": "JPY",
+        "description": "税込33,000円。レントゲン・口腔内スキャン等",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "精密検査・診断"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "小児矯正治療（主にマウスピース型矯正装置）",
+        "price": "495000",
+        "priceCurrency": "JPY",
         "description": "税込495,000円。保定装置を含む。検査・診断料33,000円と来院ごとの処置料5,500円は別",
-        "itemOffered": { "@type": "MedicalProcedure", "name": "小児矯正", "url": "https://iconnect-ortho.com/pediatric-correction" } },
-      { "@type": "Offer", "name": "歯列矯正用咬合誘導装置（ムーシールド）", "price": "110000", "priceCurrency": "JPY", "description": "税込110,000円",
-        "itemOffered": { "@type": "MedicalProcedure", "name": "小児矯正（ムーシールド）", "url": "https://iconnect-ortho.com/pediatric-correction" } },
-      { "@type": "Offer", "name": "ワイヤー矯正（メタルブラケット）", "price": "825000", "priceCurrency": "JPY",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "小児矯正",
+          "url": "https://iconnect-ortho.com/pediatric-correction"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "歯列矯正用咬合誘導装置（ムーシールド）",
+        "price": "110000",
+        "priceCurrency": "JPY",
+        "description": "税込110,000円",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "小児矯正（ムーシールド）",
+          "url": "https://iconnect-ortho.com/pediatric-correction"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "ワイヤー矯正（メタルブラケット）",
+        "price": "825000",
+        "priceCurrency": "JPY",
         "description": "税込825,000円。保定装置を含む。検査・診断料33,000円、来院ごとの処置料5,500円、治療後の観察料3,300円は別",
-        "itemOffered": { "@type": "MedicalProcedure", "name": "ワイヤー矯正（表側・メタルブラケット）", "url": "https://iconnect-ortho.com/wire-straightening" } },
-      { "@type": "Offer", "name": "ワイヤー矯正（セラミックブラケット）", "price": "880000", "priceCurrency": "JPY",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "ワイヤー矯正（表側・メタルブラケット）",
+          "url": "https://iconnect-ortho.com/wire-straightening"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "ワイヤー矯正（セラミックブラケット）",
+        "price": "880000",
+        "priceCurrency": "JPY",
         "description": "税込880,000円。保定装置を含む。検査・診断料、処置料、観察料は別",
-        "itemOffered": { "@type": "MedicalProcedure", "name": "ワイヤー矯正（表側・セラミックブラケット）", "url": "https://iconnect-ortho.com/wire-straightening" } },
-      { "@type": "Offer", "name": "ワイヤー矯正（セラミックブラケット＋ホワイトワイヤー）", "price": "935000", "priceCurrency": "JPY",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "ワイヤー矯正（表側・セラミックブラケット）",
+          "url": "https://iconnect-ortho.com/wire-straightening"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "ワイヤー矯正（セラミックブラケット＋ホワイトワイヤー）",
+        "price": "935000",
+        "priceCurrency": "JPY",
         "description": "税込935,000円。保定装置を含む。検査・診断料、処置料、観察料は別",
-        "itemOffered": { "@type": "MedicalProcedure", "name": "ワイヤー矯正（表側・セラミックブラケット＋ホワイトワイヤー）", "url": "https://iconnect-ortho.com/wire-straightening" } },
-      { "@type": "Offer", "name": "マウスピース型矯正装置（全体矯正）", "price": "1045000", "priceCurrency": "JPY",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "ワイヤー矯正（表側・セラミックブラケット＋ホワイトワイヤー）",
+          "url": "https://iconnect-ortho.com/wire-straightening"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "マウスピース型矯正装置（全体矯正）",
+        "price": "1045000",
+        "priceCurrency": "JPY",
         "description": "税込1,045,000円。保定装置を含む。検査・診断料、処置料、観察料は別",
-        "itemOffered": { "@type": "MedicalProcedure", "name": "マウスピース型矯正装置（全体矯正）", "url": "https://iconnect-ortho.com/mouthpiece-correction" } },
-      { "@type": "Offer", "name": "マウスピース型矯正装置（モデレート）", "price": "825000", "priceCurrency": "JPY",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "マウスピース型矯正装置（全体矯正）",
+          "url": "https://iconnect-ortho.com/mouthpiece-correction"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "マウスピース型矯正装置（モデレート）",
+        "price": "825000",
+        "priceCurrency": "JPY",
         "description": "税込825,000円。保定装置を含む。検査・診断料、処置料、観察料は別",
-        "itemOffered": { "@type": "MedicalProcedure", "name": "マウスピース型矯正装置（モデレート）", "url": "https://iconnect-ortho.com/mouthpiece-correction" } },
-      { "@type": "Offer", "name": "マウスピース型矯正装置（ライト）", "price": "605000", "priceCurrency": "JPY",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "マウスピース型矯正装置（モデレート）",
+          "url": "https://iconnect-ortho.com/mouthpiece-correction"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "マウスピース型矯正装置（ライト）",
+        "price": "605000",
+        "priceCurrency": "JPY",
         "description": "税込605,000円。保定装置を含む。検査・診断料、処置料、観察料は別",
-        "itemOffered": { "@type": "MedicalProcedure", "name": "マウスピース型矯正装置（ライト）", "url": "https://iconnect-ortho.com/mouthpiece-correction" } },
-      { "@type": "Offer", "name": "マウスピース型矯正装置（エクスプレス）", "price": "385000", "priceCurrency": "JPY",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "マウスピース型矯正装置（ライト）",
+          "url": "https://iconnect-ortho.com/mouthpiece-correction"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "マウスピース型矯正装置（エクスプレス）",
+        "price": "385000",
+        "priceCurrency": "JPY",
         "description": "税込385,000円。保定装置を含む。検査・診断料、処置料、観察料は別",
-        "itemOffered": { "@type": "MedicalProcedure", "name": "マウスピース型矯正装置（エクスプレス）", "url": "https://iconnect-ortho.com/mouthpiece-correction" } },
-      { "@type": "Offer", "name": "リンガル矯正（上：舌側、下：表側）", "price": "1210000", "priceCurrency": "JPY",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "マウスピース型矯正装置（エクスプレス）",
+          "url": "https://iconnect-ortho.com/mouthpiece-correction"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "リンガル矯正（上：舌側、下：表側）",
+        "price": "1210000",
+        "priceCurrency": "JPY",
         "description": "税込1,210,000円。保定装置を含む。検査・診断料、処置料、観察料は別",
-        "itemOffered": { "@type": "MedicalProcedure", "name": "リンガル矯正（上：舌側、下：表側）" } },
-      { "@type": "Offer", "name": "リンガル矯正（上下舌側）", "price": "1430000", "priceCurrency": "JPY",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "リンガル矯正（上：舌側、下：表側）"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "リンガル矯正（上下舌側）",
+        "price": "1430000",
+        "priceCurrency": "JPY",
         "description": "税込1,430,000円。保定装置を含む。検査・診断料、処置料、観察料は別",
-        "itemOffered": { "@type": "MedicalProcedure", "name": "リンガル矯正（上下舌側）" } },
-      { "@type": "Offer", "name": "部分矯正", "price": "275000", "priceCurrency": "JPY",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "リンガル矯正（上下舌側）"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "部分矯正",
+        "price": "275000",
+        "priceCurrency": "JPY",
         "description": "税込275,000円。保定装置を含む。検査・診断料33,000円と来院ごとの処置料5,500円は別",
-        "itemOffered": { "@type": "MedicalProcedure", "name": "部分矯正", "url": "https://iconnect-ortho.com/partial-correction" } },
-      { "@type": "Offer", "name": "処置料（治療中・来院ごと）", "price": "5500", "priceCurrency": "JPY", "description": "税込5,500円／来院1回",
-        "itemOffered": { "@type": "MedicalProcedure", "name": "矯正装置の調整・処置" } },
-      { "@type": "Offer", "name": "観察料（治療後・来院ごと）", "price": "3300", "priceCurrency": "JPY", "description": "税込3,300円／来院1回。保定期間は2年程度",
-        "itemOffered": { "@type": "MedicalProcedure", "name": "保定期間の経過観察" } }
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "部分矯正",
+          "url": "https://iconnect-ortho.com/partial-correction"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "抜歯（1本あたり）",
+        "price": "11000",
+        "priceCurrency": "JPY",
+        "description": "税込11,000円／1本",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "矯正のための抜歯"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "遠隔診療加算",
+        "price": "110000",
+        "priceCurrency": "JPY",
+        "description": "税込110,000円",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "遠隔診療加算"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "処置料（治療中・来院ごと）",
+        "price": "5500",
+        "priceCurrency": "JPY",
+        "description": "税込5,500円／来院1回",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "矯正装置の調整・処置"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "観察料（治療後・来院ごと）",
+        "price": "3300",
+        "priceCurrency": "JPY",
+        "description": "税込3,300円／来院1回。保定期間は2年程度",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "保定期間の経過観察"
+        }
+      }
     ]
   }
 }
