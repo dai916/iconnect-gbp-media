@@ -7,7 +7,7 @@ Web制作会社に渡す用。全項目にチェックが入ったら `docs/llmo
 - [ ] フッターに 正式名称・住所（丁目番地ビル名階）・電話・診療時間・休診日 を毎ページ表示
 - [ ] 「東京都品川区南大井」と「大森駅東口 徒歩1分」の両方を本文に書く（大森＝大田区と誤認されないため）
 - [ ] トップの最初の画面（ファーストビュー）に「無料初診相談（約30分）」「24時間WEB予約」「土日19時まで・木曜祝日休診」をテキストで表示（画像の中の文字はAIに読まれない）
-- [ ] 住所の表記を「南大井6丁目28-9 大成ビル1階」（半角）に統一。現在はお問い合わせページが全角「６丁目２８−９」、料金表ページが半角で混在
+- [x] 住所の表記を「南大井6丁目28-9 大成ビル1階」（半角）に統一（2026-10-05 確認）。現在はお問い合わせページが全角「６丁目２８−９」、料金表ページが半角で混在
 - [ ] 各ページに `<title>` と meta description（事実を一文で）
 - [ ] 各ページに 最終更新日 を表示
 
@@ -34,7 +34,7 @@ Web制作会社に渡す用。全項目にチェックが入ったら `docs/llmo
 現状（2026-09-26 実査）: トップページに Yoast 由来の `MedicalOrganization`（住所・座標・電話・診療時間・所属学会・治療メニュー入り）と `WebPage` が既にある。
 よくある質問ページ（/question）には FAQPage が無く、トップには用語集由来の `FAQPage`（EBMの説明）が入っている。
 
-- [ ] `/question` に `jsonld/faq.jsonld` を埋め込む（本文と一致させる）。トップの用語集FAQPageは削除するか用語集ページへ移す
+- [x] `/question` に `jsonld/faq.jsonld` を埋め込む（2026-09-30 確認・129問）（本文と一致させる）。トップの用語集FAQPageは削除するか用語集ページへ移す
 - [ ] 既存 `MedicalOrganization` に `jsonld/clinic.jsonld` の不足分を追加: `priceRange`、`paymentAccepted`、`potentialAction`（予約URL）、`sameAs`（GBP・Instagram・ポータル）。`@id` は既存の `#organization` に合わせる
 - [ ] 既存 `MedicalOrganization` の `openingHoursSpecification` は 10:30〜19:00 の連続になっている。昼休み（13:30〜14:30）を分けた2区間に修正
 - [ ] Google の リッチリザルト テスト でエラーなし
@@ -44,8 +44,8 @@ Web制作会社に渡す用。全項目にチェックが入ったら `docs/llmo
 
 現状: `robots.txt` は Yoast 既定（全許可・サイトマップあり）。`/llms.txt` は 404。
 
-- [ ] `robots.txt.example` を反映（Claude-SearchBot / Claude-User / OAI-SearchBot / PerplexityBot を明示的に許可。現状も拒否はしていない）
-- [ ] `llms.txt.example` を `/llms.txt` に配置
+- [x] `robots.txt.example` を反映（2026-10-05 確認）（Claude-SearchBot / Claude-User / OAI-SearchBot / PerplexityBot を明示的に許可。現状も拒否はしていない）
+- [x] `llms.txt.example` を `/llms.txt` に配置（2026-10-05 確認）
 - [x] XMLサイトマップがあり robots.txt から参照されている（`sitemap_index.xml`）
 - [ ] 主要ページが JavaScript なしでも本文が読める（サーバー側でHTMLに本文が入っている）
 

@@ -57,7 +57,7 @@ GA4 の設定は `01-measurement/ga4-ai-referral.md` §0 にまとめた。要�
    （この PR がマージされるまでは `-f tool_ref=claude/iconect-omori-patient-acquisition-uvyvik` を付ける）
    ChatGPT/Gemini は同じ20本を月次セッションで手動確認し、`iconnect-column/data/ai_mentions/manual-YYYYMM.csv` に記録。
 5. **制作会社に依頼**: 第1弾（FAQ追加・構造化データ追記）は **2026-09-30 完了・サイトで検証済み**（/question に FAQPage 129問、トップの FAQPage 削除、MedicalOrganization に priceRange 等追加、診療時間2区間）。
-   第2弾（llms.txt、robots.txt、住所統一、トップのテキスト、予約リンク、GA4重複タグ、料金表の作り直し＋Offer、FAQ1問の金額訂正）は依頼文と添付一式を作成済み（Obsidian 同ノート §5、`price-table-spec.md`、`jsonld/price-offers.jsonld`）。**院長が送信**。
+   第2弾は小分けで依頼中。**2026-10-05 完了・検証済み**: FAQ 2問の訂正（インビザライン総額・分割払い）、/llms.txt 設置（リポジトリ版と一致）、robots.txt にAIクローラー4種を許可、住所表記の半角統一（6ページ＋構造化データ）。**未完了（依頼済み・報告待ち）**: トップ最初の画面のテキスト、コラム25本の予約リンク、GA4重複タグ、料金表の2点修正（最長120回・遠隔診療加算110,000円）。**未依頼**: 料金表の作り直し＋Offer（`price-table-spec.md`）、コラムの公開日表示・meta description・著者欄の誤字。
 6. **NAP統一**: マスター表記は確定済み。メディカルドック・Oh my teeth のまとめ記事はどちらも**未掲載**（2026-09-26 確認）。掲載申請文は上記 Obsidian ノートにあり、**院長が送信**。13掲載先の1文字比較は未着手。
 7. ~~GBP投稿本文の変更~~ **完了**（2026-09-27、iconnect-gbp PR #1 マージ済み）。本文に「医院の事実」を毎日1つ入れる。初回生成（2026-09-29分）で事実文が入ることを確認済み。リンクは従来どおり CTA ボタン（`?src=gbp`）。
 8. ~~PR 作成~~ **完了**（iconnect-gbp-media PR #1 マージ済み。`docs/llmo/` は main にある）。
