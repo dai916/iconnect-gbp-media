@@ -55,6 +55,17 @@ Claude は複数ソースを突き合わせて医院を特定する。表記ゆ�
 | 歯のねっと | 050-3138-3592 | 正しい | — |
 | Yahoo!マップ | 掲載が見つからない | 未登録の可能性 | Yahoo!プレイス（無料）で登録 |
 
+## メディカルドックの掲載ページ（2026-10-19、検索結果に基づく）
+
+| ページ | URL | 電話 | 備考 |
+|---|---|---|---|
+| 医院ページ | https://medicaldoc.jp/clinic/398809/ | 050-3138-2215（誤り） | 休診日「月」。修正の起点 |
+| 品川区の矯正歯科13医院（2026） | https://medicaldoc.jp/d/orthodontic/recommend-orthodontic/shinagawa-ct-kyousei/ （2ページ目 …/2/、旧URL https://medicaldoc.jp/d/recommend-d/shinagawa-ct-kyousei/ ） | 050-3138-3592（正） | — |
+| 東京都の部分矯正15医院（2026） | https://medicaldoc.jp/d/orthodontic/recommend-orthodontic/tokyo-partial-correction/ | 要確認 | 2025年版の旧URL https://medicaldoc.jp/d/recommend-d/tokyo-partial-correction/2/ は電話 050-3138-2215、住所「28-6」の誤り |
+
+掲載なしを確認: 大森駅の矯正歯科8医院、大森駅の小児歯科6医院、品川区のマウスピース型矯正7医院（2025）。
+掲載未確認: 東京都のマウスピース型矯正26医院、東京都の矯正歯科28医院、大森駅の歯医者さん11医院。
+
 ## まとめ記事への掲載（AIの引用元になりやすい）
 
 | 記事 | URL | 掲載状況 | 対応 |
