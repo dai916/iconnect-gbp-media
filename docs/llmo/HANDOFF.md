@@ -29,34 +29,39 @@ Claude は Brave 検索 + Google Maps/Places を使い、複数ソースで一�
 - `04-gbp/` 投稿本文ガイド（毎回「医院の事実」を1つ入れる）、Q&A欄の種10問
 - `05-compliance/` 医療広告ガイドライン・ステマ規制・AI向け逆効果行為
 
-## 3. 判明している事実（他セッションの記録より）
+## 3. 判明している事実（2026-09-25 Mac側で確定）
 
-- GBPのウェブサイト欄は `https://iconnect-ortho.com/?src=gbp_site` に変更済みで、GA4で `src` を追跡している（2026-09-21「GMB新セッション作成」）。
-  → iconnect-ortho.com にGA4は導入済み。流入元の目印は UTM ではなく `src=` パラメータ方式。
-- コラム投稿の効果測定でGA4を使っている（院長談）。設定の詳細は Mac 上のセッション
-  「ホームページコラム検証結果」（サイドバー「HPコラム」グループ）と Obsidian にある。クラウド側からは読めない。
+GA4 の設定は `01-measurement/ga4-ai-referral.md` §0 にまとめた。要点:
+
+- 測定ID `G-V9ECX6FNG1` / プロパティ `352420487`。GTM `GTM-5BVCBHW` 経由。院長アカウントは**閲覧者のみ**（管理はアウトカム）。
+- 予約CV（キーイベント）は既設: `web_予約` / `denwa_yoyaku` / `line_yoyaku` / `form_submit`。予約完了は外部ドメインで取れない。
+- `src=` はランディングページのクエリ文字列として残るだけ（カスタムディメンション無し）。
+- **デフォルトチャネルグループに `AI Assistant` が既にある**。カスタムチャネルグループは不要（閲覧者権限では作れない）。
+- **claude.ai は参照元として 0 件**（2026-01〜09）。AI参照元はほぼ chatgpt.com。Claude 由来は Direct か指名検索に混ざるため、**問診票が唯一の一次データ**。
+- API は非公開リポジトリ `iconnect-column` の `ga4-adhoc.yml`（読み取り専用）で叩ける。手順書 §3 にクエリJSONあり。ベースライン数値は Obsidian `AI検索対策/2026-09-25_GA4現状とAI経由流入ベースライン.md`。
 
 ## 4. 未完了・次にやること（優先順）
 
-1. **GA4の既存設定を把握する**  
-   Macで「ホームページコラム検証結果」を開き、次を入力して回答を新セッションに貼る:
+1. ~~GA4の既存設定を把握する~~ **完了**（§3）。
+2. ~~GA4に AI Referral チャネルを作る~~ **不要**。標準の `AI Assistant` チャネルを使う。代わりに毎月1日に §3 のクエリを実行し、問診票の集計と並べて Obsidian に記録する。
+3. ~~`【要確認】` の事実確定~~ **完了**（2026-09-26 院長回答＋サイト実査で反映済み。処置料は来院ごと税込5,500円、観察料3,300円、保定2年、検査は相談当日、追加アライナー費なし、カード可、保険適用矯正なし、英語なし、駐輪場なし）。
+   残る `【要確認】` は NAP 掲載先の登録有無（Apple/Yahoo/Bing/歯科医師会）と未承認医療機器の注記のみ。
+   サイト実査で判明: Yoast の `MedicalOrganization` JSON-LD は既にある（`page-checklist.md` §D）。`/llms.txt` は404。まとめ記事2本はいずれも未掲載。
+4. ~~ベースライン計測~~ **仕組み完成・初回実行済み**（2026-09-27）。
+   非公開リポジトリ `dai916/iconnect-column` の `ai-mentions.yml`（手動実行のみ、スケジュール無し）が、この公開リポジトリの
+   `01-measurement/` から質問20本とツールを取得し、登録済みの API キーで実行する。結果は `iconnect-column/data/ai_mentions/`
+   （`summary.md` に推移表、`history.csv` に1行=1実行）。月1回、セッションから次で起動する:
    ```
-   GA4の設定内容をまとめてください。測定ID、srcパラメータの記録方法（カスタムディメンション名かGTMか）、
-   コンバージョンやキーイベントの一覧、コラム効果測定で見ている指標、管理画面の権限の有無。
+   gh workflow run ai-mentions.yml -R dai916/iconnect-column
    ```
-   または Obsidian のGA4ノート（.md）を添付。
-2. **GA4に AI Referral チャネルを作る**（`01-measurement/ga4-ai-referral.md` §1）  
-   管理 → データの表示 → チャネルグループ → 新規作成。参照元の正規表現:
-   `^(claude\.ai|chatgpt\.com|chat\.openai\.com|perplexity\.ai|gemini\.google\.com|copilot\.microsoft\.com|you\.com|felo\.ai|genspark\.ai)$`  
-   院長はチャネルグループ画面のスクリーンショットを送る予定だった。予約完了イベント（`reservation_complete`）は既存の仕組みに合わせて設計し直す。
-3. **`【要確認】` の事実確定**（院内）: 住所の番地・ビル名・階、電話、平日診療時間・休診日、料金の範囲と内訳、所属学会・資格、予約URL。  
-   `02-website/`・`03-listings/`・`04-gbp/` のテンプレートに一括反映。
-4. **ベースライン計測**: `cd docs/llmo/01-measurement/tools && pip install -r requirements.txt && export ANTHROPIC_API_KEY=... && python measure_ai_mentions.py --only P01,P18` で動作確認 → 20本実行。  
-   ChatGPT/Gemini は同じ20本を手動で投げ `results/manual-YYYYMM.csv` に記録。結果本文は `.gitignore` 済み。
-5. **制作会社に依頼**: `02-website/page-checklist.md` を渡す（JSON-LD、robots.txt、llms.txt、FAQ公開、限定解除表記）。
-6. **NAP統一**: `03-listings/nap-checklist.md` のマスター表記を確定し、13掲載先を点検。メディカルドック「大森駅の矯正歯科8医院」への掲載有無を確認。
-7. **GBP投稿本文の変更**: `04-gbp/post-text-guidelines.md` のルールを非公開リポジトリ `iconnect-gbp` の投稿生成に反映（本文に事実を1つ＋ `?src=gbp_post` リンク）。
-8. 必要なら PR 作成（ブランチはpush済み。PRはまだ作っていない）。
+   （この PR がマージされるまでは `-f tool_ref=claude/iconect-omori-patient-acquisition-uvyvik` を付ける）
+   ChatGPT/Gemini は同じ20本を月次セッションで手動確認し、`iconnect-column/data/ai_mentions/manual-YYYYMM.csv` に記録。
+5. **制作会社に依頼**: 第1弾（FAQ追加・構造化データ追記）は **2026-09-30 完了・サイトで検証済み**（/question に FAQPage 129問、トップの FAQPage 削除、MedicalOrganization に priceRange 等追加、診療時間2区間）。
+   第2弾は小分けで依頼中。**2026-10-05 完了・検証済み**: FAQ 2問の訂正（インビザライン総額・分割払い）、/llms.txt 設置（リポジトリ版と一致）、robots.txt にAIクローラー4種を許可、住所表記の半角統一（6ページ＋構造化データ）。**未完了（依頼済み・報告待ち）**: トップ最初の画面のテキスト、コラム25本の予約リンク、GA4重複タグ、料金表の2点修正（最長120回・遠隔診療加算110,000円）。**未依頼**: 料金表の作り直し＋Offer（`price-table-spec.md`）、コラムの公開日表示・meta description・著者欄の誤字。
+6. **NAP統一**: マスター表記は確定済み。メディカルドック・Oh my teeth のまとめ記事はどちらも**未掲載**（2026-09-26 確認）。掲載申請文は上記 Obsidian ノートにあり、**院長が送信**。13掲載先の1文字比較は未着手。
+7. ~~GBP投稿本文の変更~~ **完了**（2026-09-27、iconnect-gbp PR #1 マージ済み）。本文に「医院の事実」を毎日1つ入れる。初回生成（2026-09-29分）で事実文が入ることを確認済み。リンクは従来どおり CTA ボタン（`?src=gbp`）。
+8. ~~PR 作成~~ **完了**（iconnect-gbp-media PR #1 マージ済み。`docs/llmo/` は main にある）。
+9. **翌月（2026-11-01 頃）の計測**で、FAQ公開・まとめ記事掲載の効果を P01〜P17 の言及率で確認する。ベースラインは 10/20（50%）。
 
 ## 5. 注意事項
 
