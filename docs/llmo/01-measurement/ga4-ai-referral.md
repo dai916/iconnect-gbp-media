@@ -30,7 +30,15 @@ Google検索と区別できない「AI Overviews / AIモード経由」（計測
 | キャンセル | `mode%3Dcancel` | — |
 
 - 予約サイトの完了画面に追加のタグを置く必要はない。GA4の管理画面「イベントを作成」で、`page_view` かつ `page_location` に `reserve_set` を含むものを `reservation_complete` として作れば、追加費用なしで予約確定を計測できる見込み。
-- **未検証**: `reserve_set` が本当に確定後の画面か、再診の予約も含むか。アウトカムにテスト予約で確認してもらう。
+- **2026-10-20 テスト予約で確認済み**（院長、初診相談、11月20日10:30枠、スマートフォン、ログイン済み）。GA4に記録された流れ:
+  1. 11:38 ホームページ `/` で `web_予約`（参照元 google / organic）
+  2. 11:38 予約サイトのトップ（URLに `_gl=` が自動付与され、参照元 google / organic が引き継がれた）
+  3. 11:39 メニュー選択 `reserve.php?cates_id=1`（初診相談）
+  4. 11:39 `reserve.php?next_state=reserve_set&mm_id=20&sm_id=4&...&res_unix_date=1795100400`（11月20日）
+  5. 11:39 予約サイトのトップ `index.php?no_cache=...` に戻る
+  - 同じ時間帯に別の患者（LINEログイン、`cates_id=12` → `mm_id=21` の `reserve_set` → トップ）も同じ順序だった。ログイン済みの人は `reserve_set` が予約確定の画面と判断できる。
+  - `mm_id=20` が初診相談。初診相談の予約だけを数えるなら `reserve_set` かつ `mm_id%3D20`。
+  - 未確認: 未ログインの新規患者（`reg_customer_first.php` の会員登録を経由する流れ）も最後に `reserve_set` を通るか。9月の `reserve_set` 170ユーザーと、予約システム管理画面の9月のWEB予約件数を突き合わせて確かめる。
 - 予約サイト到達セッションの参照元は `(direct)` が大半（9/1〜10/19 で 286 / 335）。予約サイトだけ直接開く再診患者が多いためと考えられる。
 - 副次的に見つかったもの: `iconnectorth.xsrv.jp`（Xserver初期ドメイン）が 296 PV、`manage-omorikyousei.reserve.ne.jp`（予約管理画面）が 13 PV 計測されている。前者は本ドメインへ転送、後者は内部トラフィックとして除外が望ましい。
 
