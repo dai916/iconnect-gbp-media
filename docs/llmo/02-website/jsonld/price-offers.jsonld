@@ -54,7 +54,8 @@
           "@type": "MedicalProcedure",
           "name": "小児矯正",
           "url": "https://iconnect-ortho.com/pediatric-correction"
-        }
+        },
+        "category": "小児矯正"
       },
       {
         "@type": "Offer",
@@ -66,7 +67,8 @@
           "@type": "MedicalProcedure",
           "name": "小児矯正（ムーシールド）",
           "url": "https://iconnect-ortho.com/pediatric-correction"
-        }
+        },
+        "category": "小児矯正"
       },
       {
         "@type": "Offer",
@@ -78,7 +80,8 @@
           "@type": "MedicalProcedure",
           "name": "ワイヤー矯正（表側・メタルブラケット）",
           "url": "https://iconnect-ortho.com/wire-straightening"
-        }
+        },
+        "category": "成人矯正"
       },
       {
         "@type": "Offer",
@@ -90,7 +93,8 @@
           "@type": "MedicalProcedure",
           "name": "ワイヤー矯正（表側・セラミックブラケット）",
           "url": "https://iconnect-ortho.com/wire-straightening"
-        }
+        },
+        "category": "成人矯正"
       },
       {
         "@type": "Offer",
@@ -102,7 +106,8 @@
           "@type": "MedicalProcedure",
           "name": "ワイヤー矯正（表側・セラミックブラケット＋ホワイトワイヤー）",
           "url": "https://iconnect-ortho.com/wire-straightening"
-        }
+        },
+        "category": "成人矯正"
       },
       {
         "@type": "Offer",
@@ -114,7 +119,8 @@
           "@type": "MedicalProcedure",
           "name": "マウスピース型矯正装置（全体矯正）",
           "url": "https://iconnect-ortho.com/mouthpiece-correction"
-        }
+        },
+        "category": "成人矯正"
       },
       {
         "@type": "Offer",
@@ -126,7 +132,8 @@
           "@type": "MedicalProcedure",
           "name": "マウスピース型矯正装置（モデレート）",
           "url": "https://iconnect-ortho.com/mouthpiece-correction"
-        }
+        },
+        "category": "成人矯正"
       },
       {
         "@type": "Offer",
@@ -138,7 +145,8 @@
           "@type": "MedicalProcedure",
           "name": "マウスピース型矯正装置（ライト）",
           "url": "https://iconnect-ortho.com/mouthpiece-correction"
-        }
+        },
+        "category": "成人矯正"
       },
       {
         "@type": "Offer",
@@ -150,7 +158,8 @@
           "@type": "MedicalProcedure",
           "name": "マウスピース型矯正装置（エクスプレス）",
           "url": "https://iconnect-ortho.com/mouthpiece-correction"
-        }
+        },
+        "category": "成人矯正"
       },
       {
         "@type": "Offer",
@@ -161,7 +170,8 @@
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "リンガル矯正（上：舌側、下：表側）"
-        }
+        },
+        "category": "成人矯正"
       },
       {
         "@type": "Offer",
@@ -172,7 +182,8 @@
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "リンガル矯正（上下舌側）"
-        }
+        },
+        "category": "成人矯正"
       },
       {
         "@type": "Offer",
@@ -184,7 +195,8 @@
           "@type": "MedicalProcedure",
           "name": "部分矯正",
           "url": "https://iconnect-ortho.com/partial-correction"
-        }
+        },
+        "category": "成人矯正"
       },
       {
         "@type": "Offer",
@@ -195,7 +207,8 @@
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "矯正のための抜歯"
-        }
+        },
+        "category": "成人矯正"
       },
       {
         "@type": "Offer",
@@ -206,7 +219,8 @@
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "遠隔診療加算"
-        }
+        },
+        "category": "成人矯正"
       },
       {
         "@type": "Offer",
@@ -217,7 +231,8 @@
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "矯正装置の調整・処置"
-        }
+        },
+        "category": "調整料"
       },
       {
         "@type": "Offer",
@@ -228,7 +243,8 @@
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "保定期間の経過観察"
-        }
+        },
+        "category": "調整料"
       }
     ]
   }
