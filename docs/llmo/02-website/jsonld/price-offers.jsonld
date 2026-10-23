@@ -61,7 +61,7 @@
         "name": "歯列矯正用咬合誘導装置（ムーシールド）",
         "price": "110000",
         "priceCurrency": "JPY",
-        "description": "100,000円（税込110,000円）。検査・診断料は別",
+        "description": "100,000円（税込110,000円）。含まれるもの: レントゲンを含む定期検診。検査・診断料は別",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "小児矯正（ムーシールド）",
@@ -179,7 +179,7 @@
         "name": "部分矯正",
         "price": "275000",
         "priceCurrency": "JPY",
-        "description": "250,000円（税込275,000円）。検査・診断料と来院ごとの処置料は別",
+        "description": "250,000円（税込275,000円）。含まれるもの: 必要な場合IPR・保定装置。検査・診断料と来院ごとの処置料は別",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "部分矯正",
