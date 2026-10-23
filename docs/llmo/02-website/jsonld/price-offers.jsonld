@@ -16,7 +16,7 @@
         "name": "初診相談",
         "price": "0",
         "priceCurrency": "JPY",
-        "description": "無料。所要時間は約30分",
+        "description": "無料。約30分の相談（必要ならレントゲン・口腔内スキャン）",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "初診相談"
@@ -27,7 +27,7 @@
         "name": "セカンドオピニオン",
         "price": "11000",
         "priceCurrency": "JPY",
-        "description": "税込11,000円",
+        "description": "10,000円（税込11,000円）。約30分の相談",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "セカンドオピニオン"
@@ -38,7 +38,7 @@
         "name": "検査料＋診断料",
         "price": "33000",
         "priceCurrency": "JPY",
-        "description": "税込33,000円。レントゲン・口腔内スキャン等",
+        "description": "30,000円（税込33,000円）。レントゲン・口腔内スキャン・CT・歯並びの移動シミュレーション・フェイススキャンによる3Dフェイシャルシミュレーション",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "精密検査・診断"
@@ -49,7 +49,7 @@
         "name": "小児矯正治療（主にマウスピース型矯正装置）",
         "price": "495000",
         "priceCurrency": "JPY",
-        "description": "税込495,000円。保定装置を含む。検査・診断料33,000円と来院ごとの処置料5,500円は別",
+        "description": "450,000円（税込495,000円）。含まれるもの: マウスピース・ワイヤー・必要に応じてその他拡大床、ヘッドギア等の矯正装置・保定装置。検査・診断料と来院ごとの処置料は別",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "小児矯正",
@@ -61,7 +61,7 @@
         "name": "歯列矯正用咬合誘導装置（ムーシールド）",
         "price": "110000",
         "priceCurrency": "JPY",
-        "description": "税込110,000円",
+        "description": "100,000円（税込110,000円）。検査・診断料は別",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "小児矯正（ムーシールド）",
@@ -73,7 +73,7 @@
         "name": "ワイヤー矯正（メタルブラケット）",
         "price": "825000",
         "priceCurrency": "JPY",
-        "description": "税込825,000円。保定装置を含む。検査・診断料33,000円、来院ごとの処置料5,500円、治療後の観察料3,300円は別",
+        "description": "750,000円（税込825,000円）。含まれるもの: 必要な場合インプラントアンカー、IPR、マウスピース矯正、パラタルアーチ等の補助装置・保定装置。検査・診断料、来院ごとの処置料、治療後の観察料は別",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "ワイヤー矯正（表側・メタルブラケット）",
@@ -85,7 +85,7 @@
         "name": "ワイヤー矯正（セラミックブラケット）",
         "price": "880000",
         "priceCurrency": "JPY",
-        "description": "税込880,000円。保定装置を含む。検査・診断料、処置料、観察料は別",
+        "description": "800,000円（税込880,000円）。含まれるもの: 必要な場合インプラントアンカー、IPR、マウスピース矯正、パラタルアーチ等の補助装置・保定装置。検査・診断料、来院ごとの処置料、治療後の観察料は別",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "ワイヤー矯正（表側・セラミックブラケット）",
@@ -97,7 +97,7 @@
         "name": "ワイヤー矯正（セラミックブラケット＋ホワイトワイヤー）",
         "price": "935000",
         "priceCurrency": "JPY",
-        "description": "税込935,000円。保定装置を含む。検査・診断料、処置料、観察料は別",
+        "description": "850,000円（税込935,000円）。含まれるもの: 必要な場合インプラントアンカー、IPR、マウスピース矯正、パラタルアーチ等の補助装置・保定装置。検査・診断料、来院ごとの処置料、治療後の観察料は別",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "ワイヤー矯正（表側・セラミックブラケット＋ホワイトワイヤー）",
@@ -109,7 +109,7 @@
         "name": "マウスピース型矯正装置（全体矯正）",
         "price": "1045000",
         "priceCurrency": "JPY",
-        "description": "税込1,045,000円。保定装置を含む。検査・診断料、処置料、観察料は別",
+        "description": "950,000円（税込1,045,000円）。含まれるもの: デンタルモニタリング・必要な場合インプラントアンカー、IPR、ワイヤー矯正・保定装置。検査・診断料、来院ごとの処置料、治療後の観察料は別",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "マウスピース型矯正装置（全体矯正）",
@@ -121,7 +121,7 @@
         "name": "マウスピース型矯正装置（モデレート）",
         "price": "825000",
         "priceCurrency": "JPY",
-        "description": "税込825,000円。保定装置を含む。検査・診断料、処置料、観察料は別",
+        "description": "750,000円（税込825,000円）。含まれるもの: 必要な場合インプラントアンカー、IPR、ワイヤー矯正・保定装置。検査・診断料、来院ごとの処置料、治療後の観察料は別",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "マウスピース型矯正装置（モデレート）",
@@ -133,7 +133,7 @@
         "name": "マウスピース型矯正装置（ライト）",
         "price": "605000",
         "priceCurrency": "JPY",
-        "description": "税込605,000円。保定装置を含む。検査・診断料、処置料、観察料は別",
+        "description": "550,000円（税込605,000円）。含まれるもの: 必要な場合インプラントアンカー、IPR、ワイヤー矯正・保定装置。検査・診断料、来院ごとの処置料、治療後の観察料は別",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "マウスピース型矯正装置（ライト）",
@@ -145,7 +145,7 @@
         "name": "マウスピース型矯正装置（エクスプレス）",
         "price": "385000",
         "priceCurrency": "JPY",
-        "description": "税込385,000円。保定装置を含む。検査・診断料、処置料、観察料は別",
+        "description": "350,000円（税込385,000円）。含まれるもの: 必要な場合インプラントアンカー、IPR、ワイヤー矯正・保定装置。検査・診断料、来院ごとの処置料、治療後の観察料は別",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "マウスピース型矯正装置（エクスプレス）",
@@ -157,7 +157,7 @@
         "name": "リンガル矯正（上：舌側、下：表側）",
         "price": "1210000",
         "priceCurrency": "JPY",
-        "description": "税込1,210,000円。保定装置を含む。検査・診断料、処置料、観察料は別",
+        "description": "1,100,000円（税込1,210,000円）。含まれるもの: 必要な場合インプラントアンカー、IPR、マウスピース矯正、パラタルアーチ等の補助装置・保定装置。検査・診断料、来院ごとの処置料、治療後の観察料は別",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "リンガル矯正（上：舌側、下：表側）"
@@ -168,7 +168,7 @@
         "name": "リンガル矯正（上下舌側）",
         "price": "1430000",
         "priceCurrency": "JPY",
-        "description": "税込1,430,000円。保定装置を含む。検査・診断料、処置料、観察料は別",
+        "description": "1,300,000円（税込1,430,000円）。含まれるもの: 必要な場合インプラントアンカー、IPR、マウスピース矯正、パラタルアーチ等の補助装置・保定装置。検査・診断料、来院ごとの処置料、治療後の観察料は別",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "リンガル矯正（上下舌側）"
@@ -179,7 +179,7 @@
         "name": "部分矯正",
         "price": "275000",
         "priceCurrency": "JPY",
-        "description": "税込275,000円。保定装置を含む。検査・診断料33,000円と来院ごとの処置料5,500円は別",
+        "description": "250,000円（税込275,000円）。検査・診断料と来院ごとの処置料は別",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "部分矯正",
@@ -191,7 +191,7 @@
         "name": "抜歯（1本あたり）",
         "price": "11000",
         "priceCurrency": "JPY",
-        "description": "税込11,000円／1本",
+        "description": "10,000円（税込11,000円）／1本",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "矯正のための抜歯"
@@ -202,7 +202,7 @@
         "name": "遠隔診療加算",
         "price": "110000",
         "priceCurrency": "JPY",
-        "description": "税込110,000円",
+        "description": "100,000円（税込110,000円）",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "遠隔診療加算"
@@ -213,7 +213,7 @@
         "name": "処置料（治療中・来院ごと）",
         "price": "5500",
         "priceCurrency": "JPY",
-        "description": "税込5,500円／来院1回",
+        "description": "5,000円（税込5,500円）／来院1回",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "矯正装置の調整・処置"
@@ -224,7 +224,7 @@
         "name": "観察料（治療後・来院ごと）",
         "price": "3300",
         "priceCurrency": "JPY",
-        "description": "税込3,300円／来院1回。保定期間は2年程度",
+        "description": "3,000円（税込3,300円）／来院1回。保定期間は2年程度",
         "itemOffered": {
           "@type": "MedicalProcedure",
           "name": "保定期間の経過観察"
