@@ -40,7 +40,7 @@ Google検索と区別できない「AI Overviews / AIモード経由」（計測
   - `mm_id=20` が初診相談。初診相談の予約だけを数えるなら `reserve_set` かつ `mm_id%3D20`。GA4側に専用イベントは作らず、APIの絞り込みで数える（過去分もさかのぼって数えられるため）。
   - 未確認: 未ログインの新規患者（`reg_customer_first.php` の会員登録を経由する流れ）も最後に `reserve_set` を通るか。9月の初診相談の予約完了は問診表の件数とほぼ一致した（数値はObsidian）。
 - 予約サイト到達セッションの参照元は `(direct)` が大半。予約サイトだけ直接開く再診患者が多いためと考えられる。
-- 副次的に見つかったもの: `iconnectorth.xsrv.jp` は **アウトカムのテスト環境**（参照元 office.oclient.net、修正のたびに数十PV）。本番のGA4に混ざるので、テスト環境ではGTMを読み込まない、またはGA4の内部トラフィック除外にホスト名で登録してもらう。公開状態なら noindex も依頼する（本番と同じ内容が検索AIに二重に見えるため）。「本ドメインへ転送」という以前の案は誤りなので撤回。`manage-omorikyousei.reserve.ne.jp`（予約管理画面）は内部トラフィックとして除外。
+- 副次的に見つかったもの: `iconnectorth.xsrv.jp` は **アウトカムのテスト環境**（参照元 office.oclient.net、修正のたびに数十PV）。本番のGA4に混ざるが、院長判断で対応は不要（2026-10-26）。月次集計では hostName を `iconnect-ortho.com` と `omorikyousei.reserve.ne.jp` に絞って除外する。`manage-omorikyousei.reserve.ne.jp`（予約管理画面）も同様に集計側で除外する。
 
 ### 2026-10-20 の再確認（エンゲージメント時間）
 
