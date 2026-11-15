@@ -75,3 +75,10 @@ GA4 の設定は `01-measurement/ga4-ai-referral.md` §0 にまとめた。要�
 - ブランチ: https://github.com/dai916/iconnect-gbp-media/tree/claude/iconect-omori-patient-acquisition-uvyvik
 - 関連セッション: 「GMB新セッション作成」（`src=gbp_site` 設定）、「ホームページコラム検証結果」（GA4設定）、「アイコネクト大森矯正歯科集客レポート」（2026年9月 集客レポート artifact: https://claude.ai/artifact/9QSDwQSm1QzRfZf46jiCVX）
 - 調査ソースは `docs/llmo/README.md` 末尾および前セッションの初回回答を参照
+
+## 効果検証（2026-11-15）
+
+同じ20問・同じモデルでの2回目の計測を実施。言及率は 10/20 → 17/20。GA4の流入・予約完了の数値と所見は
+Obsidian `AI検索対策/2026-11-15_AI検索対策_効果検証.md`、回答本文は `iconnect-column/data/ai_mentions/` にある（公開リポジトリには置かない）。
+残課題: メディカルドックの電話・休診日、ドクターズ・ファイルの費用、ブログ /archives/1803 と料金表の本番反映確認、03番号の掲載先、症例数・分割条件の明記。
+問診表の「AIに聞いた」の集計は未実施（Claude由来の予約を測る唯一の一次データ）。
